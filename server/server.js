@@ -4,7 +4,9 @@ const PORT = process.env.PORT || 3000;
 const pool = require('./db')
 
 
-
+app.post('/signup', async (req, res) => {
+  const {username, password} = req.body
+})
 
 
 
