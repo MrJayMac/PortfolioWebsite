@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './About.css';
 import Modal from 'react-modal';
 
 const About = () => {
@@ -17,7 +18,6 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <h1>Hello, I'm Joshua</h1>
 
       <div className="button-group">
         {/* Experience Modal */}
