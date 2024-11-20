@@ -18,11 +18,17 @@ const Projects = () => {
       demo: '',
       description: 'A feature-rich Todo app using React, Express, Node, and PostgreSQL for full-stack functionality.',
     },
+    {
+      id: 2,
+      title: 'Movie Recommender',
+      github: 'https://github.com/MrJayMac/movie-recommend',
+      demo: '',
+      description: 'A dynamic movie recommendation system built with React, Express, NodeJS, and PostgreSQL. Leverages the TMDB API to provide personalized movie suggestions based on user preferences and watched history.'
+    }
   ];
 
   return (
     <section id="projects">
-      <h5>My Recent Work</h5>
       <h2>Projects</h2>
 
       <div className="container projects__container">

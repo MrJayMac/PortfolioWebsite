@@ -4,7 +4,6 @@ import './Skills.css';
 const Skills = () => {
   return (
     <section id='skills'>
-      <h5>What Skills I Have</h5>
       <h2>My Skills</h2>
       
       <div className="container skills__container">
@@ -13,38 +12,44 @@ const Skills = () => {
           <div className="skills__content">
             <article className='skills__details'>
               <div>
-                <h4>HTML</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='skills__details'>
-              <div>
-                <h4>CSS</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='skills__details'>
-              <div>
                 <h4>JavaScript</h4>
-                <small className='text-light'>Proficient</small>
+                <small className='text-light'>3 years</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
                 <h4>Python</h4>
-                <small className='text-light'>Proficient</small>
+                <small className='text-light'>2 years</small>
+              </div>
+            </article>
+            <article className='skills__details'>
+              <div>
+                <h4>NodeJS</h4>
+                <small className='text-light'>2 years</small>
+              </div>
+            </article>
+            <article className='skills__details'>
+              <div>
+                <h4>HTML</h4>
+                <small className='text-light'>2 years</small>
+              </div>
+            </article>
+            <article className='skills__details'>
+              <div>
+                <h4>CSS</h4>
+                <small className='text-light'>2 years</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
                 <h4>SQL</h4>
-                <small className='text-light'>Proficient</small>
+                <small className='text-light'>3 years</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
-                <h4>Terraform</h4>
-                <small className='text-light'>Beginner</small>
+                <h4>NodeJS</h4>
+                <small className='text-light'>2 years</small>
               </div>
             </article>
           </div>
@@ -69,14 +74,8 @@ const Skills = () => {
             </article>
             <article className='skills__details'>
               <div>
-                <h4>ReactJS / React Native</h4>
-                <small className='text-light'>Proficient</small>
-              </div>
-            </article>
-            <article className='skills__details'>
-              <div>
-                <h4>GraphQL</h4>
-                <small className='text-light'>Experienced</small>
+                <h4>React</h4>
+                <small className='text-light'>3 years</small>
               </div>
             </article>
           </div>
