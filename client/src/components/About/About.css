@@ -27,9 +27,7 @@
 }
 
 .card:hover {
-  background-color: #007bff;
-  color: white;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .card h5 {

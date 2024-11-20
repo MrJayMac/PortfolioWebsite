@@ -13,43 +13,37 @@ const Skills = () => {
             <article className='skills__details'>
               <div>
                 <h4>JavaScript</h4>
-                <small className='text-light'>3 years</small>
+                <small className='text-light'>Proficient</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
                 <h4>Python</h4>
-                <small className='text-light'>2 years</small>
+                <small className='text-light'>Proficient</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
                 <h4>NodeJS</h4>
-                <small className='text-light'>2 years</small>
+                <small className='text-light'>Proficient</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
                 <h4>HTML</h4>
-                <small className='text-light'>2 years</small>
+                <small className='text-light'>Proficient</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
                 <h4>CSS</h4>
-                <small className='text-light'>2 years</small>
+                <small className='text-light'>Experienced</small>
               </div>
             </article>
             <article className='skills__details'>
               <div>
                 <h4>SQL</h4>
-                <small className='text-light'>3 years</small>
-              </div>
-            </article>
-            <article className='skills__details'>
-              <div>
-                <h4>NodeJS</h4>
-                <small className='text-light'>2 years</small>
+                <small className='text-light'>Proficient</small>
               </div>
             </article>
           </div>
@@ -62,12 +56,6 @@ const Skills = () => {
           <div className="skills__content">
             <article className='skills__details'>
               <div>
-                <h4>NodeJS</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='skills__details'>
-              <div>
                 <h4>Flask</h4>
                 <small className='text-light'>Experienced</small>
               </div>
@@ -75,7 +63,7 @@ const Skills = () => {
             <article className='skills__details'>
               <div>
                 <h4>React</h4>
-                <small className='text-light'>3 years</small>
+                <small className='text-light'>Proficient</small>
               </div>
             </article>
           </div>

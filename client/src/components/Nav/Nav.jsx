@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Nav.css';
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState('#');
-
   const navLinks = [
-    { href: '#', label: 'Home' },
-    { href: '#about', label: 'About' },
+    { href: '#', label: 'About' },
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' },
@@ -18,8 +15,6 @@ const Nav = () => {
         <a
           key={href}
           href={href}
-          onClick={() => setActiveNav(href)}
-          className={activeNav === href ? 'active' : ''}
         >
           {label}
         </a>
