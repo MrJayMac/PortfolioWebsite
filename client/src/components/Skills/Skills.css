@@ -5,10 +5,10 @@
 }
 
 .skills__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
   
 .skills__container > div {
   background: var(--color-bg-variant);
@@ -22,6 +22,8 @@
   background: transparent;
   border-color: var(--color-primary-variant);
   cursor: default;
+  transform: scale(1.05);
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
 }
   
 .skills__container > div h3 {

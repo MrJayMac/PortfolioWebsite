@@ -7,7 +7,7 @@ const Skills = () => {
       <h2 className='skills_title'>My Skills</h2>
       
       <div className="container skills__container">
-        <div className="skills_frontend">
+        <div className="skills">
           <h3>Languages</h3>
           <div className="skills__content">
             <article className='skills__details'>
@@ -51,7 +51,7 @@ const Skills = () => {
 
         {/* END OF Languages */}
 
-        <div className="skills__backend">
+        <div className="skills">
           <h3>Frameworks & Libraries</h3>
           <div className="skills__content">
             <article className='skills__details'>
