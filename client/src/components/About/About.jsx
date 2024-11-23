@@ -1,80 +1,67 @@
 import React, { useState } from 'react';
 import './About.css';
-import Modal from 'react-modal';
 
 const About = () => {
-  const [experience, setExperience] = useState(false);
-  const [background, setBackground] = useState(false);
-  const [interest, setInterest] = useState(false);
+  const [modalType, setModalType] = useState(null);
 
-  const openExperience = () => setExperience(true);
-  const closeExperience = () => setExperience(false);
+  const openModal = (type) => setModalType(type);
+  const closeModal = () => setModalType(null);
 
-  const openBackground = () => setBackground(true);
-  const closeBackground = () => setBackground(false);
-
-  const openInterest = () => setInterest(true);
-  const closeInterest = () => setInterest(false);
+  const modalContent = {
+    experience: {
+      title: 'Experience',
+      content: (
+        <>
+          <p><strong>Telus - Software Engineer Intern:</strong> Developed tools for network monitoring...</p>
+          <p><strong>Mitsubishi - Software Developer Intern:</strong> Developed automation systems...</p>
+        </>
+      ),
+    },
+    background: {
+      title: 'Background',
+      content: (
+        <>
+          <p><strong>Bachelor's of Computer Engineering, Queen's University</strong></p>
+          <p><strong>Relevant Courses:</strong> Object-Oriented Programming, Data Structures, Algorithms, Operating Systems, etc.</p>
+        </>
+      ),
+    },
+    interests: {
+      title: 'Interests',
+      content: (
+        <>
+          <p><strong>Hobbies:</strong> Basketball, Ultimate Frisbee, Running, Video Editing, Video Games</p>
+          <p><strong>Dream Travel Destinations:</strong> China, Singapore, Switzerland</p>
+        </>
+      ),
+    },
+  };
 
   return (
     <div className="about-container">
       <h1>About Me</h1>
       <div className="cards-container">
-        {/* Experience Card */}
-        <div className="card" onClick={openExperience}>
-          <h5>Experience</h5>
-          <p>Click to learn about my professional journey.</p>
-        </div>
-        
-        {/* Background Card */}
-        <div className="card" onClick={openBackground}>
-          <h5>Background</h5>
-          <p>Click to learn about my educational background.</p>
-        </div>
-
-        {/* Interests Card */}
-        <div className="card" onClick={openInterest}>
-          <h5>Interests</h5>
-          <p>Click to discover my personal interests.</p>
-        </div>
+        {['experience', 'background', 'interests'].map((type) => (
+          <div key={type} className="card" onClick={() => openModal(type)}>
+            <h5>{modalContent[type].title}</h5>
+            <p>Click to learn more about my {type}.</p>
+          </div>
+        ))}
       </div>
 
-      {/* Modals for each section */}
-      <Modal
-        isOpen={experience}
-        onRequestClose={closeExperience}
-        className="modal-content"
-        overlayClassName="modal-overlay"
-      >
-        <h3>Experience</h3>
-        <p><strong>Telus - Software Engineer Intern:</strong> Developed tools for network monitoring...</p>
-        <p><strong>Mitsubishi - Software Developer Intern:</strong> Developed automation systems...</p>
-        <button className="modal-close" onClick={closeExperience}>Close</button>
-      </Modal>
-
-      <Modal
-        isOpen={background}
-        onRequestClose={closeBackground}
-        className="modal-content"
-        overlayClassName="modal-overlay"
-      >
-        <h3>Background</h3>
-        <p><strong>Bachelor's of Computer Engineering, Queen's University</strong></p>
-        <p><strong>Relevant Courses:</strong> Object-Oriented Programming, Data Structures, Algorithms, Operating Systems, etc.</p>
-        <button className="modal-close" onClick={closeBackground}>Close</button>
-      </Modal>
-
-      <Modal
-        isOpen={interest}
-        onRequestClose={closeInterest}
-        className="modal-content"
-        overlayClassName="modal-overlay"
-      >
-        <h3>Interests</h3>
-        <p><strong>Hobbies:</strong> Basketball, Ultimate Frisbee, Running, Video Editing, Video Games</p>
-        <p><strong>Dream Travel Destinations:</strong> China, Singapore, Switzerland</p>
-        <button className="modal-close" onClick={closeInterest}>Close</button>
-      </Modal>
+      <div className={`modal ${modalType ? 'open' : ''}`}>
+        <div className="modal-content">
+          {modalType && (
+            <>
+              <h3>{modalContent[modalType].title}</h3>
+              {modalContent[modalType].content}
+              <button className="modal-close" onClick={closeModal}>
+                Close
+              </button>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

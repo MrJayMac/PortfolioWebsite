@@ -26,19 +26,22 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 className='project_title'>Projects</h2>
 
       <div className="container projects__container">
-        {projectData.map(({ id, title, image, github, description }) => (
+        {projectData.map(({ id, title, github, description }) => (
           <article key={id} className="project__item">
             <div className="project__item-image">
-              <img src={image} alt={`${title}-image`} />
+              <img alt={`${title}-image`} />
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
             <div className="project__item-cta">
-              <a href={github} className="btn" target="_blank" rel="noreferrer">
+            <a href={github} className="btn" target="_blank" rel="noreferrer">
                 GitHub
+              </a>
+              <a href={github} className="btn" target="_blank" rel="noreferrer">
+                Demo
               </a>
             </div>
           </article>
