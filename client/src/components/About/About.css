@@ -42,53 +42,69 @@
 
 
 .modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease-in;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  text-align: center;
-  transform: scale(0.95);
-  transition: all 0.3s ease-in-out;
-}
-
 
 .modal.open {
   opacity: 1;
-  z-index: 999;
+  visibility: visible;
 }
 
-.modal.open .modal-content {
-  transform: scale(1);
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: slideIn 0.4s ease-out;
+}
+
+.modal-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 10px 0;
 }
 
 .modal-close {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 25px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
   background-color: #007bff;
-  color: white;
-  border-radius: 5px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .modal-close:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
-
 

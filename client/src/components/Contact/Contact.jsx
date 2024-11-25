@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Contact.css'; // Ensure you have a separate CSS file for styling
+import emailjs from 'emailjs-com';
+import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,17 +9,38 @@ const Contact = () => {
     message: '',
   });
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Example: Log form data to the console (you can replace this with actual form submission logic)
-    console.log(formData);
+    console.log('Service ID:', process.env.REACT_APP_SERVICEID);
+    console.log('Template ID:', process.env.REACT_APP_TEMPLATE);
+    console.log('Public Key:', process.env.REACT_APP_PUBKEY);
+
+
+    emailjs
+      .send(
+        process.env.REACT_APP_SERVICEID,
+        process.env.REACT_APP_TEMPLATE,
+        {
+          to_name: "Joshua", 
+          from_name: formData.name, 
+          message: formData.message, 
+          from_email: formData.email,
+          reply_to: formData.email, 
+        },
+        process.env.REACT_APP_PUBKEY
+      )
+      .then(() => {
+        alert('Message sent successfully!');
+      })
+      .catch((error) => {
+        console.error('Error sending message:', error);
+        alert('Failed to send message, please try again later.');
+      });
   };
 
   return (
