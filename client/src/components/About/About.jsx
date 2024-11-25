@@ -1,11 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
 
 const About = () => {
   const [modalType, setModalType] = useState(null);
 
-  const openModal = (type) => setModalType(type);
-  const closeModal = () => setModalType(null);
+  const openModal = (type) => setModalType(type);  // Set the modal type to open
+  const closeModal = () => setModalType(null);  // Close the modal
+
+  // Close modal if the user clicks outside the modal content
+  const handleClickOutside = (e) => {
+    if (e.target.classList.contains('modal')) {
+      closeModal();
+    }
+  };
+
+  // Listen for clicks outside the modal when modal is open
+  useEffect(() => {
+    if (modalType) {
+      document.addEventListener('mousedown', handleClickOutside);  // Listen for click outside modal
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);  // Clean up the event listener
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);  // Clean up when component unmounts
+    };
+  }, [modalType]);
 
   const modalContent = {
     experience: {
@@ -49,19 +69,23 @@ const About = () => {
         ))}
       </div>
 
-      <div className={`modal ${modalType ? 'open' : ''}`}>
-        <div className="modal-content">
-          {modalType && (
-            <>
+      {/* Modal to display content and image */}
+      {modalType && (
+        <div className={`modal ${modalType ? 'open' : ''}`}> {/* Add 'open' class when modalType is set */}
+          <div className="modal-content">
+            <div className="left">
+              <p>IMAGE HERE</p> {/* Placeholder for the image */}
+            </div>
+            <div className="right">
               <h3>{modalContent[modalType].title}</h3>
               {modalContent[modalType].content}
               <button className="modal-close" onClick={closeModal}>
                 Close
               </button>
-            </>
-          )}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

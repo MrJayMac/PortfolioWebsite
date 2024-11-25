@@ -40,7 +40,7 @@
   color: #555;
 }
 
-
+/* Modal Background */
 .modal {
   position: fixed;
   top: 0;
@@ -52,25 +52,51 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0; /* Start with invisible */
+  visibility: hidden; /* Hide initially */
+  transition: opacity 0.5s ease, visibility 0.3s ease;
 }
 
 .modal.open {
-  opacity: 1;
-  visibility: visible;
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make the modal visible */
 }
 
+/* Modal Content - Zoom-in Animation */
 .modal-content {
+  display: flex;
+  flex-direction: row; /* Align left and right content side by side */
   background-color: #ffffff;
   padding: 30px;
   border-radius: 15px;
-  max-width: 600px;
+  max-width: 80%;
   width: 90%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
-  animation: slideIn 0.4s ease-out;
+  transform: scale(0); /* Start small (scaled down) */
+  opacity: 0; /* Start invisible */
+  animation: zoomIn 0.6s ease-out forwards; /* Smooth zoom-in effect */
+}
+
+/* Left Side (Image Section) */
+.modal-content .left {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font-size: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* Right Side (Text Content) */
+.modal-content .right {
+  flex: 2;
+  padding: 20px;
+  text-align: left;
 }
 
 .modal-content h3 {
@@ -88,6 +114,7 @@
   margin: 10px 0;
 }
 
+/* Close Button */
 .modal-close {
   margin-top: 20px;
   padding: 10px 25px;
@@ -108,3 +135,14 @@
   transform: scale(1.05);
 }
 
+/* Zoom-In Animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0); /* Start small (scaled down) */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: scale(1); /* End at normal size */
+    opacity: 1; /* Fade in */
+  }
+}
