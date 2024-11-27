@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(to right, #ece9e6, #ffffff); 
@@ -24,17 +23,11 @@ h1, h3 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
-
-a {
-  text-decoration: none;
-  color: #3498db;
-  transition: color 0.3s ease;
+h2 {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 3rem;
 }
-
-a:hover {
-  color: #2980b9;
-}
-
 
 button {
   cursor: pointer;
@@ -52,7 +45,6 @@ button:hover {
   color: #007bff; 
   border-color: #ccc; 
 }
-
 
 
 #root {
@@ -78,12 +70,31 @@ section:hover {
   transform: translateY(-5px); 
 }
 
+
 section h1, section h2 {
   margin-bottom: 1.5rem; 
-  border-bottom: 3px solid #3498db; 
+  border-bottom: 3px solid; 
   display: inline-block;
   padding-bottom: 5px;
 }
+
+
+#about h1, #about h2 {
+  border-bottom-color: #e74c3c; 
+}
+
+#projects h1, #projects h2 {
+  border-bottom-color: #3498db; 
+}
+
+#skills h1, #skills h2 {
+  border-bottom-color: #2ecc71; 
+}
+
+#contact h1, #contact h2 {
+  border-bottom-color: #9b59b6; 
+}
+
 
 #about, #projects, #skills, #contact {
   margin: 5rem 0;

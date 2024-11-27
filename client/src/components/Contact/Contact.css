@@ -1,19 +1,7 @@
 #contact {
   background-color: var(--color-bg);
   padding: 5rem 2rem;
-  text-align: center;
-}
-
-h5 {
-  font-size: 1.2rem;
-  color: var(--color-light);
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 2rem;
-  color: var(--color-dark);
-  margin-bottom: 3rem;
+  text-align: left;
 }
 
 .contact__container {
@@ -59,8 +47,6 @@ h2 {
   margin-bottom: 1rem;
   transition: border-color 0.3s ease;
 }
-
-
 
 
 .contact__form-inputs textarea {
