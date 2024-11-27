@@ -4,26 +4,24 @@ import './About.css';
 const About = () => {
   const [modalType, setModalType] = useState(null);
 
-  const openModal = (type) => setModalType(type);  // Set the modal type to open
-  const closeModal = () => setModalType(null);  // Close the modal
+  const openModal = (type) => setModalType(type);
+  const closeModal = () => setModalType(null); 
 
-  // Close modal if the user clicks outside the modal content
   const handleClickOutside = (e) => {
     if (e.target.classList.contains('modal')) {
       closeModal();
     }
   };
 
-  // Listen for clicks outside the modal when modal is open
   useEffect(() => {
     if (modalType) {
-      document.addEventListener('mousedown', handleClickOutside);  // Listen for click outside modal
+      document.addEventListener('mousedown', handleClickOutside);  
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);  // Clean up the event listener
+      document.removeEventListener('mousedown', handleClickOutside);  
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);  // Clean up when component unmounts
+      document.removeEventListener('mousedown', handleClickOutside); 
     };
   }, [modalType]);
 
@@ -41,8 +39,10 @@ const About = () => {
       title: 'Background',
       content: (
         <>
-          <p><strong>Bachelor's of Computer Engineering, Queen's University</strong></p>
-          <p><strong>Relevant Courses:</strong> Object-Oriented Programming, Data Structures, Algorithms, Operating Systems, etc.</p>
+          <p><strong>School:</strong> Queen's University</p>
+          <p><strong>Degree:</strong> Bachelors of Applied Science - Computer Engineering</p>
+          <p><strong>GPA:</strong> 3.7</p>
+          <p><strong>Relevant Courses:</strong> Object-Oriented Programming, Data Structures, Algorithms, Operating Systems, Fundamentals of Software Engineering, Engineering Design Principles</p>
         </>
       ),
     },
@@ -69,12 +69,11 @@ const About = () => {
         ))}
       </div>
 
-      {/* Modal to display content and image */}
       {modalType && (
-        <div className={`modal ${modalType ? 'open' : ''}`}> {/* Add 'open' class when modalType is set */}
+        <div className={`modal ${modalType ? 'open' : ''}`}> 
           <div className="modal-content">
             <div className="left">
-              <p>IMAGE HERE</p> {/* Placeholder for the image */}
+              <p>IMAGE HERE</p>
             </div>
             <div className="right">
               <h3>{modalContent[modalType].title}</h3>

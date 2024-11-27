@@ -45,8 +45,8 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <h5 className='skills_contact'>Get In Touch</h5>
+      <h2 className='skills_contact'>Contact Me</h2>
       
       <div className="contact__container">
         <form onSubmit={handleSubmit} className="contact__form">

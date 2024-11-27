@@ -26,7 +26,7 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <h2 className='project_title'>Projects</h2>
+      <h2>Projects</h2>
 
       <div className="container projects__container">
         {projectData.map(({ id, title, github, description }) => (
