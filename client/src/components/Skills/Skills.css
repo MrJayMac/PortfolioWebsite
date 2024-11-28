@@ -36,12 +36,13 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  gap: 1rem;
+  gap: 10px;
 }
 
 .skills__details h4 {
   font-size: 1.1rem;
-  text-align: center; 
+  text-align: center;
+  margin: 0;
 }
   
 .skills__details small {
@@ -76,5 +77,42 @@
       width: 100%;
       padding: 2rem 1rem;
     }
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+  .js-icon {
+    color: #F7DF1E;
+  }
+  
+  .python-icon {
+    color: #306998;
+  }
+  
+  .react-icon {
+    color: #61DAFB;
+  }
+  
+  .html-icon {
+    color: #E34F26;
+  }
+  
+  .css-icon {
+    color: #1572B6;
+  }
+  
+  .nodejs-icon {
+    color: #8CC84B;
+  }
+  
+  .git-icon {
+    color: #F1502F;
+  }
+  
+  .docker-icon {
+    color: #0DB7ED;
   }
   
