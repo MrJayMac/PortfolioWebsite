@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
+
   
 .skills__container > div {
   background: var(--color-bg-variant);
@@ -78,41 +79,17 @@
       padding: 2rem 1rem;
     }
   }
+  
+  .skills__details-inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  .skills__details .icon {
+    margin-right: 10px; /* Space between the icon and the text */
+  }
 
   .icon {
     font-size: 2rem;
     margin-right: 10px;
   }
-  
-  .js-icon {
-    color: #F7DF1E;
-  }
-  
-  .python-icon {
-    color: #306998;
-  }
-  
-  .react-icon {
-    color: #61DAFB;
-  }
-  
-  .html-icon {
-    color: #E34F26;
-  }
-  
-  .css-icon {
-    color: #1572B6;
-  }
-  
-  .nodejs-icon {
-    color: #8CC84B;
-  }
-  
-  .git-icon {
-    color: #F1502F;
-  }
-  
-  .docker-icon {
-    color: #0DB7ED;
-  }
-  
