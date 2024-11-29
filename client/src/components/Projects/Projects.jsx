@@ -2,6 +2,8 @@ import React from 'react';
 import './Projects.css';
 
 import movieRecommenderImage from '../Photos/Movie-Recommender.png'; 
+import todoListImage from '../Photos/To-do-List.png'
+import todo from '../Photos/Todo.png'
 
 const Projects = () => {
   const projectData = [
@@ -17,7 +19,7 @@ const Projects = () => {
       title: 'Todo App',
       github: 'https://github.com/MrJayMac/TodoApp',
       description: 'A feature-rich Todo app using React, Express, Node, and PostgreSQL for full-stack functionality.',
-      image: movieRecommenderImage, 
+      image: todo, 
     },
     {
       id: 3,
