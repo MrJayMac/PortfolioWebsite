@@ -46,7 +46,6 @@ button:hover {
   border-color: #ccc; 
 }
 
-
 #root {
   width: 100%;
   max-width: 1200px; 
@@ -54,17 +53,15 @@ button:hover {
   padding: 20px;
 }
 
-
 section {
-  margin: 4rem 0; 
-  padding: 2rem;  
-  background-color: #ffffff; 
-  border-radius: 15px; 
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); 
-  border: 2px solid #f1f1f1; 
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
 }
-
 section:hover {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); 
   transform: translateY(-5px); 
@@ -80,11 +77,11 @@ section h1, section h2 {
 
 
 #about h1, #about h2 {
-  border-bottom-color: #e74c3c; 
+  border-bottom-color: #3498db; 
 }
 
 #projects h1, #projects h2 {
-  border-bottom-color: #3498db; 
+  border-bottom-color: #e74c3c; 
 }
 
 #skills h1, #skills h2 {
@@ -101,11 +98,11 @@ section h1, section h2 {
 }
 
 #about {
-  border-left: 5px solid #e74c3c; 
+  border-left: 5px solid #3498db; 
 }
 
 #projects {
-  border-left: 5px solid #3498db; 
+  border-left: 5px solid #e74c3c; 
 }
 
 #skills {

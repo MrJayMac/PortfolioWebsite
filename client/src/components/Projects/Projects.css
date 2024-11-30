@@ -20,10 +20,13 @@
     transition: background-color 0.3s, transform 0.3s ease-in-out;
   }
   
-  .project__item-image {
-    border-radius: 1rem;
-    overflow: hidden;
-  }
+
+  
+.project__item-image {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
   
 .project__item-image img {
   width: 100%;
@@ -60,6 +63,33 @@
   font-size: 0.9rem; 
   border-radius: 5px; 
 }
+
+.project__skills {
+  margin-top: 10px;
+}
+
+.project__skills h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.project__skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project__skills li {
+  display: inline-block;
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
   
 @media screen and (max-width: 1024px) {
   .projects__container {

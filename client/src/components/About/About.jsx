@@ -58,8 +58,8 @@ const About = () => {
   };
 
   return (
-    <div className="about-container">
-      <h1>About Me</h1>
+    <section id="about">
+      <h2>About Me</h2>
       <div className="cards-container">
         {['experience', 'background', 'interests'].map((type) => (
           <div key={type} className="card" onClick={() => openModal(type)}>
@@ -85,7 +85,7 @@ const About = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
