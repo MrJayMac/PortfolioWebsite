@@ -161,3 +161,9 @@
     max-width: 300px;
   }
 }
+
+
+.no-scroll {
+  overflow: hidden; /* Prevent scrolling */
+  height: 100%;     /* Ensure the page doesn't extend */
+}

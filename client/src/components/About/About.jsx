@@ -5,7 +5,7 @@ const About = () => {
   const [modalType, setModalType] = useState(null);
 
   const openModal = (type) => setModalType(type);
-  const closeModal = () => setModalType(null); 
+  const closeModal = () => setModalType(null);
 
   const handleClickOutside = (e) => {
     if (e.target.classList.contains('modal')) {
@@ -15,13 +15,16 @@ const About = () => {
 
   useEffect(() => {
     if (modalType) {
-      document.addEventListener('mousedown', handleClickOutside);  
+      document.addEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'hidden'; // Disable scrolling
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);  
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = ''; // Enable scrolling
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside); 
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = ''; // Cleanup
     };
   }, [modalType]);
 
@@ -30,8 +33,18 @@ const About = () => {
       title: 'Experience',
       content: (
         <>
-          <p><strong>Telus - Software Engineer Intern:</strong> Developed tools for network monitoring...</p>
-          <p><strong>Mitsubishi - Software Developer Intern:</strong> Developed automation systems...</p>
+          <p><strong>Telus - Software Engineer Intern:</strong>
+            <div>
+              Developed Oasis, a ReactJS and VB.NET-based tool deployed on AWS, automating processes by integrating SAP and other systems.
+              Utilized Google Maps API to create real-time wireline and network tracking tools, boosting operational insights and client monitoring.
+            </div>
+          </p>
+          <p><strong>Mitsubishi - Software Developer Intern:</strong>
+            <div>
+              Developed the Component Tracking Tool using React, Flask, and SQL, with secure operator authentication.
+              Enhanced application usability by improving Azure pipeline workflows and building responsive UIs in collaboration with developers and UI/UX designers.
+            </div>
+          </p>
         </>
       ),
     },
@@ -70,7 +83,7 @@ const About = () => {
       </div>
 
       {modalType && (
-        <div className={`modal ${modalType ? 'open' : ''}`}> 
+        <div className={`modal ${modalType ? 'open' : ''}`}>
           <div className="modal-content">
             <div className="left">
               <p>IMAGE HERE</p>

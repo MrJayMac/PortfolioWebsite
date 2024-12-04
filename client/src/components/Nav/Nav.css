@@ -1,7 +1,7 @@
 nav {
     background: rgba(0, 0, 0, 0.3);
     display: flex;
-    gap: 0.8rem; 
+    gap: 1.5rem;  /* Adjusted for better spacing */
     padding: 0.5rem 1.5rem;  
     border-radius: 2rem;  
     backdrop-filter: blur(15px);
@@ -17,8 +17,7 @@ nav a {
     padding: 0.7rem 1rem; 
     border-radius: 1.5rem;  
     color: var(--color-light);
-    font-size: 0.9rem; 
-    text-transform: uppercase;
+    font-size: 1.2rem; /* Adjust size to fit icons well */
     text-decoration: none;
     font-weight: 200;
     transition: background 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
