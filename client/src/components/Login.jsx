@@ -68,7 +68,7 @@ const Login = () => {
           {isLogin ? 'Login' : 'Register'}
         </button>
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <button onClick={() => viewLogin(false)}>Sign Up</button>
       <button onClick={() => viewLogin(true)}>Login</button>
     </div>

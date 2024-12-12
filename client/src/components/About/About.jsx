@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './About.css';
+import NavBarVisibility from '../Nav/NavBarVisibility';
 
 const About = () => {
   const [modalType, setModalType] = useState(null);
+  const { setNavBarVisibility } = useContext(NavBarVisibility);
 
-  const openModal = (type) => setModalType(type);
-  const closeModal = () => setModalType(null);
+  const openModal = (type) => {
+    setNavBarVisibility(false);
+    setModalType(type);
+  };
+
+  const closeModal = () => {
+    setNavBarVisibility(true);
+    setModalType(null);
+  };
 
   const handleClickOutside = (e) => {
     if (e.target.classList.contains('modal')) {
@@ -21,7 +30,7 @@ const About = () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = ''; // Enable scrolling
     }
-
+  
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = ''; // Cleanup
@@ -85,9 +94,6 @@ const About = () => {
       {modalType && (
         <div className={`modal ${modalType ? 'open' : ''}`}>
           <div className="modal-content">
-            <div className="left">
-              <p>IMAGE HERE</p>
-            </div>
             <div className="right">
               <h3>{modalContent[modalType].title}</h3>
               {modalContent[modalType].content}
