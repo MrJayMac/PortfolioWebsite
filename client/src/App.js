@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav/Nav';
+import Home from './components/Home/Home'
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <NavBarVisibility.Provider value={{ isNavBarVisible, setNavBarVisibility }}>
       {isNavBarVisible && <Nav />}
+      <Home/>
       <About />
       <Skills />
       <Projects />
