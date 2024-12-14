@@ -18,8 +18,6 @@ const Footer = () => {
         <a href="https://github.com/MrJayMac" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         <a href="https://www.linkedin.com/in/joshua-mac-280556165/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
       </div>
-      
-      <p>&copy; 2024 Joshua Mac. All rights reserved.</p>
     </footer>
   );
 };
