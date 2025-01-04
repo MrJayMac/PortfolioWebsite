@@ -2,7 +2,7 @@ import React from 'react';
 import './Projects.css';
 
 import movieRecommenderImage from '../Photos/Movie-Recommender.png'; 
-import todoListImage from '../Photos/To-do-List.png';
+import violation from '../Photos/violation.jpg'
 import todo from '../Photos/Todo.png';
 
 const Projects = () => {
@@ -13,7 +13,7 @@ const Projects = () => {
       github: 'https://github.com/damiensmith1/CAPSTONE',
       description: 'This project leverages advanced machine learning technologies, including YOLOv8 and ResNet18, to detect traffic sign violations and promptly alert drivers, enabling proactive safety measures.',
       technologies: ['Python', 'YOLOv8', 'ResNet18'],
-      image: movieRecommenderImage, 
+      image: violation, 
     },
     {
       id: 2,
@@ -58,7 +58,7 @@ const Projects = () => {
                 GitHub
               </a>
               <a href={github} className="btn" target="_blank" rel="noreferrer">
-                Demo
+                {/*Demo*/}
               </a>
             </div>
           </article>

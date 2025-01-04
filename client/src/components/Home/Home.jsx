@@ -17,8 +17,8 @@ const Home = () => {
           Here, you’ll find insights into my projects, experiences, and the skills that drive my passion for creating impactful solutions. I’m always excited to connect, collaborate, and explore new opportunities. 
             </div>
           </p>
-          <a href="https://www.linkedin.com/in/joshua-mac-280556165/" className="btn btn-primary"><FaLinkedin/></a>
-          <a href="https://github.com/MrJayMac" className="btn btn-primary"><FaGithub/></a>
+          <a href="https://www.linkedin.com/in/joshua-mac-280556165/" className="icon"><FaLinkedin/></a>
+          <a href="https://github.com/MrJayMac" className="icon"><FaGithub/></a>
 
         </div>
       </div>
