@@ -4,7 +4,7 @@ import P2 from '../Photos/P2.png'
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 const Home = () => {
   return (
-    <section id="introduction">
+    <section id="home">
       <div className="container intro__container">
         <div className="intro__image">
           <img src={P2} alt="Introduction Image" />

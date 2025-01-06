@@ -100,17 +100,21 @@ section h1, section h2 {
 
 #about {
   border-left: 5px solid #3498db; 
+  background-color: #eaf6fc; /* Light blue */
 }
 
 #projects {
   border-left: 5px solid #e74c3c; 
+  background-color: #fdecea; /* Light red */
 }
 
 #skills {
   border-left: 5px solid #2ecc71; 
+  background-color: #eafaf1; /* Light green */
 }
 
 #contact {
   border-left: 5px solid #9b59b6; 
+  background-color: #f4eafc; /* Light purple */
 }
 
