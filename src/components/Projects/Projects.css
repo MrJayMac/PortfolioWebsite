@@ -90,18 +90,43 @@
 }
 
 
-  
-@media screen and (max-width: 1024px) {
+
+@media (max-width: 768px) {
   .projects__container {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+      grid-template-columns: 1fr; 
+      gap: 1rem; 
+      padding: 1rem; 
   }
-}
-  
-@media screen and (max-width: 600px) {
-  .projects__container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+
+  .project__item {
+      padding: 0.8rem; 
+  }
+
+  .project__item h3 {
+      font-size: 1.1rem; 
+  }
+
+  .project__item p {
+      font-size: 0.8rem;
+  }
+
+  .project__item-cta {
+      flex-direction: column; 
+      gap: 0.6rem;
+  }
+
+  .project__item-cta .btn {
+      padding: 0.4rem 1rem; 
+      font-size: 0.8rem; 
+  }
+
+  .project__skills h4 {
+      font-size: 0.85rem; 
+  }
+
+  .project__skills li {
+      font-size: 0.75rem;
+      padding: 3px 6px; 
   }
 }
 

@@ -9,9 +9,9 @@ const Footer = () => {
 
       <ul className="permalinks">
         <a href="#about">About</a>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </ul>
 
       <div className="footer__socials">
