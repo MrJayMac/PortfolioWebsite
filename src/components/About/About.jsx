@@ -16,27 +16,6 @@ const About = () => {
     setModalType(null);
   };
 
-  const handleClickOutside = (e) => {
-    if (e.target.classList.contains('modal')) {
-      closeModal();
-    }
-  };
-
-  useEffect(() => {
-    if (modalType) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'hidden'; // Disable scrolling
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = ''; // Enable scrolling
-    }
-  
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = ''; // Cleanup
-    };
-  }, [modalType]);
-
   const modalContent = {
     experience: {
       title: 'Experience',
@@ -72,8 +51,9 @@ const About = () => {
       title: 'Interests',
       content: (
         <>
-          <p><strong>Hobbies:</strong> Basketball, Ultimate Frisbee, Running, Video Editing, Video Games</p>
-          <p><strong>Dream Travel Destinations:</strong> China, Singapore, Switzerland</p>
+          <p><strong>Sports:</strong> I love running, playing basketball, pickleball, ultimate frisbee and volleyball. I even joined a couple adult leagues for Basketball and Ultimate Frisbee to stay active.</p>
+          <p><strong>Video Production:</strong> I try to work on a video project every couple of months where I film scenes and edit them. This year, I have a goal to create a documentary on runners.</p>
+          <p><strong>Dream Travel Destinations:</strong> It's been a dream to do a solo trip around China, Singapore, or Switzerland</p>
         </>
       ),
     },
