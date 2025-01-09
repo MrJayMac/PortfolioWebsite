@@ -19,7 +19,7 @@ const Home = () => {
             </div>
           </p>
           <div className="icons">
-            <a href="/Resume-Joshua-Mac.pdf" className="icon" download="Resume-Joshua-Mac.pdf">
+            <a href="/Joshua-Mac-Resume.pdf" className="icon" download="Joshua-Mac-Resume.pdf">
               <FaFileDownload />
             </a>
             <a href="https://github.com/MrJayMac" className="icon" target="_blank" rel="noopener noreferrer">
