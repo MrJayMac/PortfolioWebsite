@@ -57,9 +57,6 @@ const Projects = () => {
               <a href={github} className="btn" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a href={github} className="btn" target="_blank" rel="noreferrer">
-                {/*Demo*/}
-              </a>
             </div>
           </article>
         ))}
