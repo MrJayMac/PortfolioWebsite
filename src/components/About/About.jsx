@@ -21,16 +21,25 @@ const About = () => {
       title: 'Experience',
       content: (
         <>
-          <p><strong>Telus - Software Engineer Intern:</strong>
+          <p><strong>TELUS | Software Engineer | September 2024 - January 2025</strong>
             <div>
-              Developed Oasis, a ReactJS and VB.NET-based tool deployed on AWS, automating processes by integrating SAP and other systems.
-              Utilized Google Maps API to create real-time wireline and network tracking tools, boosting operational insights and client monitoring.
+              <p>
+                Skills: React, JavaScript, VB.NET, Python (Numpy, Pandas), Selenium, RESTful APIs, Automated Regression Testing
+              </p>
             </div>
           </p>
-          <p><strong>Mitsubishi - Software Developer Intern:</strong>
+          <p><strong>TELUS | Software Engineer Intern | January 2023 - August 2023</strong>
             <div>
-              Developed the Component Tracking Tool using React, Flask, and SQL, with secure operator authentication.
-              Enhanced application usability by improving Azure pipeline workflows and building responsive UIs in collaboration with developers and UI/UX designers.
+              <p>
+                Skills: React, JavaScript, VB.NET, Python (Numpy, Pandas), Selenium, RESTful APIs, Automated Regression Testing
+              </p>
+            </div>
+          </p>
+          <p><strong>Mitsubishi | Fullstack Developer Intern | May 2022 - January 2023</strong>
+            <div>
+              <p>
+                Skills: React, JavaScript, Python, Flask, SQL, Pytest
+              </p>
             </div>
           </p>
         </>

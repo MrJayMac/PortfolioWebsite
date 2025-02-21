@@ -91,6 +91,20 @@
   transform: scale(1.05);
 }
 
+.modal-content strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #58a6ff;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.modal-content strong:hover {
+  color: #79c0ff; 
+  transition: color 0.3s ease-in-out;
+}
+
 @keyframes zoomIn {
   0% {
     transform: scale(0);
