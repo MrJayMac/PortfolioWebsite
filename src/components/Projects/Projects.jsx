@@ -4,6 +4,7 @@ import './Projects.css';
 import movieRecommenderImage from '../Photos/Movie-Recommender.png'; 
 import violation from '../Photos/violation.jpg'
 import todo from '../Photos/Todo.png';
+import DevHub from '../Photos/DevHub1.png'
 
 const Projects = () => {
   const projectData = [
@@ -17,11 +18,11 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Todo App',
-      github: 'https://github.com/MrJayMac/TodoApp',
-      description: 'This project is a dynamic and user-friendly to-do app designed to streamline task management.',
-      technologies: ['React', 'Express', 'Node', 'PostgreSQL'],
-      image: todo, 
+      title: "DevHub",
+      github: "https://github.com/MrJayMac/DevHub",
+      description: "A full-stack web app where developers can create a portfolio, write technical blogs, and showcase projects.",
+      technologies: ['React', 'Express', 'NodeJS', 'PostgreSQL', 'TailWindCSS'],
+      image: DevHub
     },
     {
       id: 3,
@@ -30,6 +31,14 @@ const Projects = () => {
       description: "A personalized movie recommendation system that provides tailored suggestions based on the user's individual watchlist",
       technologies: ['React', 'Express', 'NodeJS', 'PostgreSQL', 'TMDB API'],
       image: movieRecommenderImage
+    },
+    {
+      id: 4,
+      title: 'Todo App',
+      github: 'https://github.com/MrJayMac/TodoApp',
+      description: 'This project is a dynamic and user-friendly to-do app designed to streamline task management.',
+      technologies: ['React', 'Express', 'Node', 'PostgreSQL'],
+      image: todo, 
     }
   ];
 
